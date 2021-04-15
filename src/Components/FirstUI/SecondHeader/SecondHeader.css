@@ -1,10 +1,30 @@
-.header img{
+.headerfirst img{
     position: absolute;
     z-index: -5;
-    height: 700px;
     width: 100%;
+    opacity: 0.9;
     
 }
-.header {
+.headerfirst {
     color: aliceblue;
+}
+
+.header-container .headersnd{
+    text-align: center;
+    color: #ffffff;
+    align-items: center;
+    justify-content: center;
+    padding-top: 280px;
+    padding-bottom: 76px;
+    
+}
+
+.headerfirst img:hover{
+    transition: 2s;
+    
+}
+.header-container .headersnd button{
+    border-radius: 30px;
+    color: darkcyan;
+    font-size:170%;
 }
