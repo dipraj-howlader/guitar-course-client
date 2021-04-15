@@ -16,8 +16,6 @@ const SecondHeader = () => {
                     <br/>
                     <br/>
                     <button type="button" class="btn btn-outline-dark btn-lg">Purchase Guitar Course</button>
-                    <br/>
-                    <br/>
                     
               </div>
         </div>

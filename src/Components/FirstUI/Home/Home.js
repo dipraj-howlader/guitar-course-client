@@ -1,5 +1,8 @@
 import React from 'react';
+import Footer from '../../Shared/Footer/Footer';
+import CourseOverview from '../CourseOverview/CourseOverview';
 import HeaderMain from '../HeaderMain/HeaderMain';
+import Review from '../Review/Review';
 import Services from '../Services/Services';
 
 const Home = () => {
@@ -7,6 +10,9 @@ const Home = () => {
         <div>
             <HeaderMain></HeaderMain>
             <Services></Services>
+            <CourseOverview></CourseOverview>
+            <Review></Review>
+            <Footer></Footer>
         </div>
     );
 };

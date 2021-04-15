@@ -15,14 +15,25 @@
     align-items: center;
     justify-content: center;
     padding-top: 280px;
-    padding-bottom: 76px;
+    padding-bottom: 106px;
     
 }
-
-.headerfirst img:hover{
-    transition: 2s;
-    
+.headersnd{
+    animation-duration: 3s;
+  animation-name: slidein;
+  animation-iteration-count:unset;
 }
+@keyframes slidein {
+    from {
+      margin-left: 100%;
+      width: 300%;
+    }
+  
+    to {
+      margin-left: 0%;
+      width: 100%;
+    }
+  }
 .header-container .headersnd button{
     border-radius: 30px;
     color: darkcyan;

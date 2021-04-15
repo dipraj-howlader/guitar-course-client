@@ -1,0 +1,10 @@
+.review-container{
+    justify-content: center;
+    text-align: center;
+    padding-top: 15px;
+    
+}
+.review-container .scroll{
+    overflow-x: scroll;
+    display: flex;
+}
