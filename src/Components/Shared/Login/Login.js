@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import firebase from "firebase/app";
 import "firebase/auth";
 import firebaseConfig from './firebase.config';
@@ -6,12 +6,20 @@ import NavvBarr from '../NavvBarr/NavvBarr';
 import './login.css';
 import loginImg from '../../../Images/login.jpg';
 import google from '../../../Images/googlw.png';
+import { UserContext } from '../../../App';
+import { useHistory, useLocation } from 'react-router';
 
 if (firebase.apps.length === 0) {
     firebase.initializeApp(firebaseConfig);
 }
 
 const Login = () => {
+    const history = useHistory();
+    const location = useLocation();
+    const { from } = location.state || { from: { pathname: "/home" } };
+
+    const [loggedInUser, setLoggedInUser] = useContext(UserContext);
+
     var provider = new firebase.auth.GoogleAuthProvider();
     const handleGoogleSignIn = () => {
         firebase.auth()
@@ -23,17 +31,23 @@ const Login = () => {
     var token = credential.accessToken;
 
     var user = result.user;
-    console.log(user);
-    // ...
+    const {displayName , email }= user;
+
+   const singInUser = {
+    isSignedIn: true,
+    name : displayName,
+    email : email
+   }
+   
+   setLoggedInUser(singInUser);
+   history.replace(from);
+   
   }).catch((error) => {
 
-    var errorCode = error.code;
+
     var errorMessage = error.message;
 
-    var email = error.email;
-
-    var credential = error.credential;
-    // ...
+ console.log(errorMessage);
   });
     }
     return (
