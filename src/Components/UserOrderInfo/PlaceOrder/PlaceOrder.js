@@ -1,5 +1,5 @@
 import React from 'react';
-import Orderlist from '../../Admin/OrderList/Orderlist';
+import Orderlist from '../OrderList/Orderlist';
 import OrderNavbar from '../OrderNavbar/OrderNavbar';
 import './PlaceOrder.css';
 

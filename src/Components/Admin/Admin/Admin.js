@@ -1,12 +1,12 @@
 import React from 'react';
 import AdminHeader from '../AdminHeader/AdminHeader';
-import Orderlist from '../OrderList/Orderlist';
+import Orderlist from '../../UserOrderInfo/OrderList/Orderlist';
 
 const Admin = () => {
     return (
         <div>
             <AdminHeader></AdminHeader>
-            <Orderlist></Orderlist>
+
         </div>
     );
 };

@@ -14,21 +14,21 @@ const OrderNavbar = () => {
       }
     return (
         <div>
-            <ul class="nav justify-content-center">
-  <li class="nav-item">
-    <a class="nav-link active" aria-current="page" onClick={gotoBook} >Book</a>
+            <ul className="nav justify-content-center">
+  <li className="nav-item">
+    <a className="nav-link active" aria-current="page" onClick={gotoBook} >Book</a>
   </li>
-  <li class="nav-item">
-    <a class="nav-link" href="#">Booking List</a>
+  <li className="nav-item">
+    <a className="nav-link" href="#">Booking List</a>
   </li>
-  <li class="nav-item">
-    <a class="nav-link" href="#">Review</a>
+  <li className="nav-item">
+    <a className="nav-link" href="#">Review</a>
   </li>
-  <li class="nav-item">
-    <a class="nav-link" onClick={gotoAdmin}>Admin</a>
+  <li className="nav-item">
+    <a className="nav-link" onClick={gotoAdmin}>Admin</a>
   </li>
-  <li class="nav-item">
-    <a class="nav-link" onClick={gotoHome}>Home</a>
+  <li className="nav-item">
+    <a className="nav-link" onClick={gotoHome}>Home</a>
   </li>
 </ul>
         </div>
