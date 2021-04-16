@@ -11,7 +11,7 @@ const ExplainService = (props) => {
     const {name , icon, description, price} = props.service
     return (
         <div className="col-md-4 service">
-            <img src={icon} alt=""/>
+           <img src={icon} alt=""/>
             <h4>{name}</h4>
             <strong>${price}</strong>
             <p>{description}</p>
