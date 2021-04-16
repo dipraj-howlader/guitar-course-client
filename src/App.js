@@ -6,6 +6,7 @@ import {
 } from "react-router-dom";
 import './App.css';
 import Home from "./Components/FirstUI/Home/Home";
+import Login from "./Components/Shared/Login/Login";
 
 function App() {
   return (
@@ -16,6 +17,9 @@ function App() {
         </Route>
         <Route path="/home">
           <Home></Home>
+        </Route>
+        <Route path="/login">
+          <Login></Login>
         </Route>
       </Switch>
     </Router>

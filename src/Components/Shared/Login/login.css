@@ -1,0 +1,13 @@
+.login-container{
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.loginButton {
+    padding-top: 200px ;
+    padding-bottom: 300px;
+}
+.login-container img{
+    border-radius: 20%;
+}
