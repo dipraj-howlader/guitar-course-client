@@ -5,10 +5,11 @@ transition: 2s;
 
 }
 .service img:hover{
-    width: 120px;
+    width: 150px;
     background-color:rgb(131, 170, 184);
     padding: 5px;
     border-radius: 40px;
+    
 }
 
 .service{

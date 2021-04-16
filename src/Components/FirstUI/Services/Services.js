@@ -8,19 +8,22 @@ const serviceFakeData = [
     name:'Basic Guitar',
     description :'Here you will learn only basic guitar structure,SarGam, Node, FritBoard, and etc!',
     price :'100',
-    icon: firstIcon
+    icon: firstIcon,
+    id:'1'
 },
 {
     name:'Learn Chords',
     description :'Here you will learn all basic guitars theme adding with Chord. So, after learning chords you can play any song',
     price :'150',
-    icon: firstIcon
+    icon: firstIcon,
+    id:'2'
 },
 {
     name:'Learn Solo and Riff',
     description :'Here you will learn Chords progression adding Solo, Riff and etc!  ',
     price :'250',
-    icon: firstIcon
+    icon: firstIcon,
+    id:'3'
 }
 ]
 const Services = () => {

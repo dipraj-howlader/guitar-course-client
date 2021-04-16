@@ -8,7 +8,7 @@ const ExplainService = (props) => {
     const gotoOrderPage = () =>{
         history.push('/order')
     }
-    const {name , icon, description, price} = props.service
+    const {name , icon, description, price ,id} = props.service
     return (
         <div className="col-md-4 service">
            <img src={icon} alt=""/>

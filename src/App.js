@@ -10,6 +10,7 @@ import Home from "./Components/FirstUI/Home/Home";
 import Login from "./Components/Shared/Login/Login";
 import PlaceOrder from "./Components/UserOrderInfo/PlaceOrder/PlaceOrder";
 import PrivateRoute from "./Components/Shared/PrivateRoute/PrivateRoute";
+import Admin from "./Components/Admin/Admin/Admin";
 
 
 
@@ -35,9 +36,15 @@ function App() {
         <Route path="/login">
           <Login></Login>
         </Route>
-        <PrivateRoute path="/order">
+        <Route path="/order">
         <PlaceOrder></PlaceOrder>
-        </PrivateRoute>
+        </Route>
+        <Route path="/admin">
+          <Admin></Admin>
+        </Route>
+        <Route>
+
+        </Route>
       </Switch>
     </Router>
     </UserContext.Provider>

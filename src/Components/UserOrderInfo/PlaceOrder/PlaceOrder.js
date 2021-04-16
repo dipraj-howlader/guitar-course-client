@@ -1,11 +1,14 @@
 import React from 'react';
+import Orderlist from '../../Admin/OrderList/Orderlist';
+import OrderNavbar from '../OrderNavbar/OrderNavbar';
 import './PlaceOrder.css';
 
 
 const PlaceOrder = () => {
     return (
         <div>
-            <h1>This is order page</h1>
+            <OrderNavbar></OrderNavbar>
+            <Orderlist></Orderlist>
         </div>
     );
 };
