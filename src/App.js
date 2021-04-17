@@ -3,7 +3,8 @@ import { createContext } from 'react';
 import {
   BrowserRouter as Router,
   Switch,
-  Route
+  Route,
+  useParams
 } from "react-router-dom";
 import './App.css';
 import Home from "./Components/FirstUI/Home/Home";
@@ -12,6 +13,7 @@ import PlaceOrder from "./Components/UserOrderInfo/PlaceOrder/PlaceOrder";
 import PrivateRoute from "./Components/Shared/PrivateRoute/PrivateRoute";
 import Admin from "./Components/Admin/Admin/Admin";
 import Payment from "./Components/ProcessPayment/Payment/Payment";
+import AddService from "./Components/Admin/AddService/AddService";
 
 
 
@@ -41,14 +43,17 @@ function App() {
         <Route path="/login">
           <Login></Login>
         </Route>
-        <PrivateRoute path="/order">
+        <Route path="/order/:id">
         <PlaceOrder></PlaceOrder>
-        </PrivateRoute>
+        </Route>
         <Route path="/admin">
           <Admin></Admin>
         </Route>
         <Route path="/payment">
         <Payment></Payment>
+        </Route>
+        <Route path="/addService">
+        <AddService></AddService>
         </Route>
       </Switch>
     </Router>

@@ -14,10 +14,10 @@ const Orderlist = (props) => {
   const history = useHistory()
 const gotoPayment =(event) =>{
   history.push('/payment');
-  const buyerMame = event.target.parentElement.elements[0].value;
+  const buyerName = event.target.parentElement.elements[0].value;
   const buyerEmail =  event.target.parentElement.elements[1].value;
   const info ={
-    buyerMame,
+    buyerName,
     buyerEmail
   }
   setUserInfo(info)
@@ -30,7 +30,8 @@ const gotoPayment =(event) =>{
    <form action="">
      <input value={loggedInUser.name} type="text"/>
      <input value={loggedInUser.email} type="text"/>
-     <button onClick={gotoPayment} type="button" class="btn btn-success">Success</button>
+     <input value="" type="text"/>
+     <button onClick={gotoPayment} type="button" class="btn btn-success">Continue to Pay</button>
    </form>
     </div>
   );

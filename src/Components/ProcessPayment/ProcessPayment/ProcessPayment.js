@@ -41,17 +41,16 @@ const ProcessPayment = () => {
         setPaymentSuccess(paymentMethod.id);
         setPaymentError(null);
         // console.log(paymentMethod.id)
+        const userCardandInfo = {
+          userInfo,
+      id: paymentMethod.id
+
+        }
+        console.log(userCardandInfo)
       
     }
 
-    const userCardandInfo = {
-      userInfo,
-      paymentSuccess
-
-
-    }
-    // setUserInfo(userCardandInfo)
-    console.log(userCardandInfo)
+    
   };
 
   return (

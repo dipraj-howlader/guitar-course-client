@@ -6,6 +6,9 @@ const AdminHeader = () => {
  const gotoHome =() => {
    history.push('/home')
  }
+ const gotoAddService = () =>{
+   history.push('/addService')
+ }
     return (
         <div>
             <ul class="nav justify-content-center">
@@ -13,7 +16,7 @@ const AdminHeader = () => {
     <a class="nav-link active" aria-current="page" href="#">Order list</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="#">Add Services</a>
+    <a class="nav-link" onClick={gotoAddService}>Add Services</a>
   </li>
   <li class="nav-item">
     <a class="nav-link" href="#">Make Admin</a>
