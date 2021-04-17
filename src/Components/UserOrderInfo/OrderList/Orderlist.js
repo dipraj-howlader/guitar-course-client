@@ -1,13 +1,16 @@
-import React, { useContext, useState }  from 'react';
+import React, { useContext, useEffect, useState }  from 'react';
 import { useForm } from "react-hook-form";
 import { useHistory } from 'react-router';
-import { UserContext } from '../../../App';
+import {  UserContext1, UserContext2, UserContext3 } from '../../../App';
 import Payment from '../../ProcessPayment/Payment/Payment';
 import './Orderlist.css'
 
 const Orderlist = (props) => {
-  const [loggedInUser, setLoggedInUser] = useContext(UserContext);
-  const [userInfo , setUserInfo] = useContext(UserContext);
+  const [loggedInUser, setLoggedInUser] = useContext(UserContext1);
+  const [userInfo , setUserInfo] = useContext(UserContext2);
+  const [courseService, setCourseService] = useContext(UserContext3);
+
+console.log(courseService.data.Pname)
 
 
 
@@ -23,14 +26,22 @@ const gotoPayment =(event) =>{
   setUserInfo(info)
 }
 
-  
+
+
 
   return (
-    <div>
+    <div className="orderInfo">
    <form action="">
+     <p>Your Name:</p>
      <input value={loggedInUser.name} type="text"/>
+     <br/>
+     <p>Your Email Address:</p>
      <input value={loggedInUser.email} type="text"/>
-     <input value="" type="text"/>
+     <br/>
+    <p>Course you want to purchase:</p>
+     <input value={courseService.data.Pname} type="text"/>
+    <br/>
+    <p style={{color:'green'}}>This course will be charged <span style={{color:'red'}}>${courseService.data.Pprice}</span></p>
      <button onClick={gotoPayment} type="button" class="btn btn-success">Continue to Pay</button>
    </form>
     </div>

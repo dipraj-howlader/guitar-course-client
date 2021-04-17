@@ -35,6 +35,16 @@ const AddService = () => {
             imageup
         }
         console.log(serviceInfo);
+        
+        fetch('http://localhost:5000/addService',{
+          method:'post',
+           headers:{
+            'content-type':'application/json'
+        },
+        body: JSON.stringify(serviceInfo)
+        })
+        .then(res => console.log('server side responsed') )
+
     };
 
     return (

@@ -1,23 +1,35 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { useHistory, useParams } from 'react-router';
+import { UserContext3 } from '../../../App';
+
 import './ExplainService.css'
 
 const ExplainService = (props) => {
+    const [courseService, setCourseService] = useContext(UserContext3);
+
     const history = useHistory();
-    
-    const gotoOrderPage = (id) =>{
-        history.push(`/order/${id}`)
+    const {_id,data,imageup} = props.service;
+    const {Pprice,Pname,Pdetails} =data;
+    const orderPageInfo = {
+        data,
+        _id
     }
-    const {name , icon, description, price ,id} = props.service;
-    // const { id } =useParams();
+    const gotoOrderPage = (_id) =>{
+        history.push(`/order/${_id}`)
+        if(props.service._id === _id){
+            setCourseService(orderPageInfo)
+        }
+
+    }
+   
 
     return (
         <div className="col-md-4 service">
-           <img src={icon} alt=""/>
-            <h4>{name}</h4>
-            <strong>${price}</strong>
-            <p>{description}</p>
-            <button onClick={() => gotoOrderPage(id)} type="button" class="btn btn-outline-secondary">Buy Now</button>
+           <img src={imageup} alt=""/>
+            <h4>{Pname}</h4>
+            <strong>${Pprice}</strong>
+            <p>{Pdetails}</p>
+            <button onClick={() => gotoOrderPage(_id)} type="button" class="btn btn-outline-secondary">Buy Now</button>
         </div>
     );
 };

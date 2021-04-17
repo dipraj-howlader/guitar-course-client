@@ -6,7 +6,7 @@ import NavvBarr from '../NavvBarr/NavvBarr';
 import './login.css';
 import loginImg from '../../../Images/login.jpg';
 import google from '../../../Images/googlw.png';
-import { UserContext } from '../../../App';
+import {  UserContext1 } from '../../../App';
 import { useHistory, useLocation } from 'react-router';
 
 if (firebase.apps.length === 0) {
@@ -18,7 +18,7 @@ const Login = () => {
     const location = useLocation();
     const { from } = location.state || { from: { pathname: "/home" } };
 
-    const [loggedInUser, setLoggedInUser] = useContext(UserContext);
+    const [loggedInUser, setLoggedInUser] = useContext(UserContext1);
 
     var provider = new firebase.auth.GoogleAuthProvider();
     const handleGoogleSignIn = () => {

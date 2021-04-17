@@ -1,13 +1,13 @@
 import React, { useContext } from 'react';
 import {CardElement, useStripe, useElements} from '@stripe/react-stripe-js';
 import { useState } from 'react';
-import { UserContext } from '../../../App';
+import {  UserContext2 } from '../../../App';
 
 const ProcessPayment = () => {
 
   const stripe = useStripe();
   const elements = useElements();
-  const [userInfo , setUserInfo] = useContext(UserContext);
+  const [userInfo , setUserInfo] = useContext(UserContext2);
 
   const [paymentError, setPaymentError] = useState(null);
   const [paymentSuccess, setPaymentSuccess] = useState(null);

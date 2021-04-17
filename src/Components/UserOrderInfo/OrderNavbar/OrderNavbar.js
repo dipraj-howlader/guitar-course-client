@@ -12,6 +12,9 @@ const OrderNavbar = () => {
     const gotoHome =() => {
         history.push('/home')
       }
+      const gotoReview = () =>{
+        history.push('/customer/review')
+      }
     return (
         <div>
             <ul className="nav justify-content-center">
@@ -22,7 +25,7 @@ const OrderNavbar = () => {
     <a className="nav-link" href="#">Booking List</a>
   </li>
   <li className="nav-item">
-    <a className="nav-link" href="#">Review</a>
+    <a className="nav-link" onClick={gotoReview}>Review</a>
   </li>
   <li className="nav-item">
     <a className="nav-link" onClick={gotoAdmin}>Admin</a>

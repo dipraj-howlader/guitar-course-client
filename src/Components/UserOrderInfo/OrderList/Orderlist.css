@@ -1,4 +1,7 @@
-div input{
-    margin: 10px;
+.orderInfo input{
+    margin-bottom: 10px;
     width: 400px;
+}
+.orderInfo p {
+    color: blueviolet;
 }

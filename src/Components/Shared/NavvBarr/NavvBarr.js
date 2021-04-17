@@ -11,6 +11,9 @@ const NavvBarr = () => {
     const gotoAdmin = () => {
       history.push('/admin')
     }
+    const gotoReview  = () =>{
+      history.push('/customer/review')
+    }
     return (
         <div style={{position:'absolute',zIndex:'10'}}>
              <Navbar expand="lg" >
@@ -26,7 +29,7 @@ const NavvBarr = () => {
             <Nav.Link   className="text-white" href="home">Home</Nav.Link>
             <Nav.Link   className="text-white" onClick={gotoLogin}>Login</Nav.Link>
             <Nav.Link   className="text-white" onClick={gotoAdmin}>Admin</Nav.Link>
-            <Nav.Link    className="text-white" href="reviews">Reviews</Nav.Link>
+            <Nav.Link    className="text-white" onClick={gotoReview}>Reviews</Nav.Link>
             <Nav.Link   className="text-white" href="blog">Blog</Nav.Link>
             <Nav.Link   className="text-white" href="contactUs">Contact Us</Nav.Link>
           </Nav>
