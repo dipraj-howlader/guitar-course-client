@@ -11,6 +11,7 @@ import Login from "./Components/Shared/Login/Login";
 import PlaceOrder from "./Components/UserOrderInfo/PlaceOrder/PlaceOrder";
 import PrivateRoute from "./Components/Shared/PrivateRoute/PrivateRoute";
 import Admin from "./Components/Admin/Admin/Admin";
+import Payment from "./Components/ProcessPayment/Payment/Payment";
 
 
 
@@ -18,6 +19,9 @@ export const UserContext = createContext();
 
 
 function App() {
+  const [userInfo,  setUserInfo] = useState({
+   
+  })
   const [loggedInUser, setLoggedInUser] = useState({
     isSignedIn: false,
       name: '',
@@ -25,6 +29,7 @@ function App() {
   })
   return (
     <UserContext.Provider value={[loggedInUser, setLoggedInUser]}>
+      <UserContext.Provider value = {[userInfo, setUserInfo]}>
     <Router>
       <Switch>
         <Route exact path="/">
@@ -36,17 +41,18 @@ function App() {
         <Route path="/login">
           <Login></Login>
         </Route>
-        <Route path="/order">
+        <PrivateRoute path="/order">
         <PlaceOrder></PlaceOrder>
-        </Route>
+        </PrivateRoute>
         <Route path="/admin">
           <Admin></Admin>
         </Route>
-        <Route>
-
+        <Route path="/payment">
+        <Payment></Payment>
         </Route>
       </Switch>
     </Router>
+    </UserContext.Provider>
     </UserContext.Provider>
   );
 }

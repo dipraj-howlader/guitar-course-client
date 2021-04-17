@@ -1,39 +1,39 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState }  from 'react';
 import { useForm } from "react-hook-form";
+import { useHistory } from 'react-router';
 import { UserContext } from '../../../App';
-import PaymentProcess from '../../PaymentProcess/PaymentProcess/PaymentProcess';
-import './Orderlist.css';
+import Payment from '../../ProcessPayment/Payment/Payment';
+import './Orderlist.css'
 
-
-
-const Orderlist = () => {
-    const { register, handleSubmit, watch, formState: { errors } } = useForm();
-  const onSubmit = data => console.log(data);
-
+const Orderlist = (props) => {
   const [loggedInUser, setLoggedInUser] = useContext(UserContext);
+  const [userInfo , setUserInfo] = useContext(UserContext);
 
-    return (
-        <div>
-          <div>
-            <form onSubmit={handleSubmit(onSubmit)}>
-      {/* register your input into the hook by invoking the "register" function */}
-      <input  defaultValue={loggedInUser.name} {...register("name")} />
-      <br/>
-      {/* include validation with required or other standard HTML validation rules */}
-      <input defaultValue={loggedInUser.email} {...register("email")} />
-      <br/>
 
-      <input  />
-      <br/>
-      <button type="submit"> PAY</button>
-    </form>
-        </div>
-        <div>
-          <PaymentProcess></PaymentProcess>
-        </div>
-        </div>
 
-    );
+  const history = useHistory()
+const gotoPayment =(event) =>{
+  history.push('/payment');
+  const buyerMame = event.target.parentElement.elements[0].value;
+  const buyerEmail =  event.target.parentElement.elements[1].value;
+  const info ={
+    buyerMame,
+    buyerEmail
+  }
+  setUserInfo(info)
+}
+
+  
+
+  return (
+    <div>
+   <form action="">
+     <input value={loggedInUser.name} type="text"/>
+     <input value={loggedInUser.email} type="text"/>
+     <button onClick={gotoPayment} type="button" class="btn btn-success">Success</button>
+   </form>
+    </div>
+  );
 };
 
 export default Orderlist;

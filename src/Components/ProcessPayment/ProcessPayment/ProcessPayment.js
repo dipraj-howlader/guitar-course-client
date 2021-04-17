@@ -1,15 +1,19 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import {CardElement, useStripe, useElements} from '@stripe/react-stripe-js';
 import { useState } from 'react';
+import { UserContext } from '../../../App';
 
-const SimpleCardForm = () => {
+const ProcessPayment = () => {
+
   const stripe = useStripe();
   const elements = useElements();
+  const [userInfo , setUserInfo] = useContext(UserContext);
 
   const [paymentError, setPaymentError] = useState(null);
   const [paymentSuccess, setPaymentSuccess] = useState(null);
 
   const handleSubmit = async (event) => {
+    // console.log(userInfo);
     // Block native form submission.
     event.preventDefault();
 
@@ -36,8 +40,18 @@ const SimpleCardForm = () => {
     } else {
         setPaymentSuccess(paymentMethod.id);
         setPaymentError(null);
-        console.log(paymentMethod)
+        // console.log(paymentMethod.id)
+      
     }
+
+    const userCardandInfo = {
+      userInfo,
+      paymentSuccess
+
+
+    }
+    // setUserInfo(userCardandInfo)
+    console.log(userCardandInfo)
   };
 
   return (
@@ -58,4 +72,4 @@ const SimpleCardForm = () => {
   );
 };
 
-export default SimpleCardForm;
+export default ProcessPayment;
