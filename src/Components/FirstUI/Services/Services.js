@@ -11,7 +11,7 @@ const Services = () => {
         .then(data => setServiceData(data))
     },[])
     return (
-        <section className="backgroundClr color row service-container pt-5">
+        <section className="backgroundClr color row service-container">
             <h1 style={{paddingBottom:'20px'}}>Our Awesome <span style={{color:'blue'}}>Courses</span></h1>
            {
                 serviceData?.map(service => <ExplainService service={service}></ExplainService>)

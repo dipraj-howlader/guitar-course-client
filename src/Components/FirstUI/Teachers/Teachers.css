@@ -1,4 +1,7 @@
-
+.teacher{
+  margin: 0;
+  padding: 0;
+}
 .container {
     position: relative;
 
@@ -7,7 +10,7 @@
   .image {
     opacity: 1;
     display: block;
-    width: 260px;
+    width: 250px;
     height: auto;
     border-radius: 20px;
     transition: .5s ease;
@@ -37,5 +40,5 @@
     background-color: #4CAF50;
     color: white;
     font-size: 16px;
-    padding: 16px 32px;
+    padding: 16px 30px;
   }

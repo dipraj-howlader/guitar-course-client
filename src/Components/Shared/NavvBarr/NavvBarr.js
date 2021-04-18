@@ -15,7 +15,7 @@ const NavvBarr = () => {
       history.push('/customer/review')
     }
     return (
-        <div style={{position:'absolute',zIndex:'10'}}>
+        <div style={{position:'absolute',zIndex:'10',margin:'0px',padding:'0px'}}>
              <Navbar expand="lg" >
                 <Navbar.Brand className="col-4" href="#home">
                     <img style={{width:'100px', borderRadius:'50%'}} src={img} alt=""/>
@@ -31,7 +31,7 @@ const NavvBarr = () => {
             <Nav.Link   className="text-white" onClick={gotoAdmin}>Dashboard</Nav.Link>
             <Nav.Link    className="text-white" onClick={gotoReview}>Reviews</Nav.Link>
             <Nav.Link   className="text-white" href="blog">Blog</Nav.Link>
-            <Nav.Link   className="text-white" href="contactUs">Contact Us</Nav.Link>
+            <Nav.Link   className="text-white" href="#contactUs">Contact Us</Nav.Link>
           </Nav>
          </div>
         </Navbar.Collapse>
