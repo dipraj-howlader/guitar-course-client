@@ -7,7 +7,7 @@ import './ReviewForm.css';
 const ReviewForm = () => {
     const { register, handleSubmit, watch, formState: { errors } } = useForm();
   const onSubmit = data => {
-    fetch('http://localhost:5000/addReview',{
+    fetch('https://evening-chamber-15530.herokuapp.com/addReview',{
         method:'POST',
          headers:{
           'content-type':'application/json'

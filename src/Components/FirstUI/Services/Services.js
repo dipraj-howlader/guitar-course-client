@@ -6,7 +6,7 @@ import ExplainService from '../ExplainService/ExplainService';
 const Services = () => {
     const [serviceData, setServiceData] = useState(null)
     useEffect(()=>{
-        fetch('http://localhost:5000/service')
+        fetch('https://evening-chamber-15530.herokuapp.com/service')
         .then(res => res.json())
         .then(data => setServiceData(data))
     },[])

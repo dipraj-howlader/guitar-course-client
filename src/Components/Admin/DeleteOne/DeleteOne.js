@@ -4,7 +4,7 @@ const DeleteOne = (props) => {
     // console.log(props.dService);
     const {_id, data ,imageup} = props.dService;
     const handleDeleteCourse = (_id) =>{
-        fetch(`http://localhost:5000/delete/${_id}`, {
+        fetch(`https://evening-chamber-15530.herokuapp.com/delete/${_id}`, {
             method: "DELETE",
           })
             .then((res) => res.json())

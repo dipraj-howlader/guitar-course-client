@@ -26,7 +26,7 @@ const AdminHeader = () => {
   }
 
   useEffect(() => {
-    fetch('http://localhost:5000/admin')
+    fetch('https://evening-chamber-15530.herokuapp.com/admin')
     .then(res => res.json())
     .then(data => setUseAdmin(data))
 },[])

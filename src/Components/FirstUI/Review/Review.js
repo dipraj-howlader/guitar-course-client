@@ -32,7 +32,7 @@ import './Review.css';
 const Review = () => {
     const [yourReview, setYourReview] = useState(null)
     useEffect(()=>{
-        fetch('http://localhost:5000/review')
+        fetch('https://evening-chamber-15530.herokuapp.com/review')
         .then(res => res.json())
         .then(data => setYourReview(data))
     },[])

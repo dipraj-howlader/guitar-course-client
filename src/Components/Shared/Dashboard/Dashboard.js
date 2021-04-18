@@ -5,7 +5,7 @@ const Dashboard = () => {
     const [userOrder, setUserOrder] = useState(null);
         
         useEffect(()=> {
-            fetch('http://localhost:5000/orders')
+            fetch('https://evening-chamber-15530.herokuapp.com/orders')
             .then(res => res.json())
             .then(data => setUserOrder(data))
         },[])

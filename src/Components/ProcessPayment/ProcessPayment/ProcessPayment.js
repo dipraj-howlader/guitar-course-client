@@ -52,7 +52,7 @@ const ProcessPayment = () => {
         console.log(userCardandInfo);
         //send to backend
         
-        fetch('http://localhost:5000/addOrder',{
+        fetch('https://evening-chamber-15530.herokuapp.com/addOrder',{
           method:'POST',
            headers:{
             'content-type':'application/json'

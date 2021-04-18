@@ -37,7 +37,7 @@ const AddService = () => {
         }
         console.log(serviceInfo);
         
-        fetch('http://localhost:5000/addService',{
+        fetch('https://evening-chamber-15530.herokuapp.com/addService',{
           method:'POST',
            headers:{
             'content-type':'application/json'

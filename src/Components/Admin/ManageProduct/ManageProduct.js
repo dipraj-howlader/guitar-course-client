@@ -7,7 +7,7 @@ const ManageProduct = () => {
     const [manageThisService, setManageThisService] = useState([]);
     
     useEffect(()=>{
-        fetch('http://localhost:5000/service')
+        fetch('https://evening-chamber-15530.herokuapp.com/service')
         .then(res => res.json())
         .then(data => setManageThisService(data))
     },[])
