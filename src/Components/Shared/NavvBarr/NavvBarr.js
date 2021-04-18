@@ -9,7 +9,7 @@ const NavvBarr = () => {
       history.push('/login')
     }
     const gotoAdmin = () => {
-      history.push('/admin')
+      history.push('/dashboard')
     }
     const gotoReview  = () =>{
       history.push('/customer/review')
@@ -28,7 +28,7 @@ const NavvBarr = () => {
          <Nav>
             <Nav.Link   className="text-white" href="home">Home</Nav.Link>
             <Nav.Link   className="text-white" onClick={gotoLogin}>Login</Nav.Link>
-            <Nav.Link   className="text-white" onClick={gotoAdmin}>Admin</Nav.Link>
+            <Nav.Link   className="text-white" onClick={gotoAdmin}>Dashboard</Nav.Link>
             <Nav.Link    className="text-white" onClick={gotoReview}>Reviews</Nav.Link>
             <Nav.Link   className="text-white" href="blog">Blog</Nav.Link>
             <Nav.Link   className="text-white" href="contactUs">Contact Us</Nav.Link>

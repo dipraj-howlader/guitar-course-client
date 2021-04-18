@@ -4,6 +4,7 @@ import { useState } from 'react';
 import {  UserContext2 } from '../../../App';
 
 const ProcessPayment = () => {
+  const date = new Date().toDateString()
 
   const stripe = useStripe();
   const elements = useElements();
@@ -43,12 +44,25 @@ const ProcessPayment = () => {
         // console.log(paymentMethod.id)
         const userCardandInfo = {
           userInfo,
-      id: paymentMethod.id
+      id: paymentMethod.id,
+      paymentType:paymentMethod.card.funding,
+      date: date
 
         }
-        console.log(userCardandInfo)
+        console.log(userCardandInfo);
+        //send to backend
+        
+        fetch('http://localhost:5000/addOrder',{
+          method:'POST',
+           headers:{
+            'content-type':'application/json'
+        },
+        body: JSON.stringify(userCardandInfo)
+        })
+        .then(res => console.log('review') )
       
     }
+
 
     
   };

@@ -37,7 +37,7 @@ const AddService = () => {
         console.log(serviceInfo);
         
         fetch('http://localhost:5000/addService',{
-          method:'post',
+          method:'POST',
            headers:{
             'content-type':'application/json'
         },

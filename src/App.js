@@ -15,6 +15,7 @@ import Admin from "./Components/Admin/Admin/Admin";
 import Payment from "./Components/ProcessPayment/Payment/Payment";
 import AddService from "./Components/Admin/AddService/AddService";
 import ReviewForm from "./Components/CustomerReview/ReviewForm";
+import MakeAdmin from "./Components/Admin/MakeAdmin/MakeAdmin";
 
 
 
@@ -53,7 +54,7 @@ function App() {
         <PrivateRoute path="/order/:id">
         <PlaceOrder></PlaceOrder>
         </PrivateRoute>
-        <Route path="/admin">
+        <Route path="/dashboard">
           <Admin></Admin>
         </Route>
         <Route path="/payment">
@@ -64,6 +65,9 @@ function App() {
         </Route>
         <Route path="/customer/review">
         <ReviewForm></ReviewForm>
+        </Route>
+        <Route path="/makeAdmin">
+          <MakeAdmin></MakeAdmin>
         </Route>
       </Switch>
     </Router>

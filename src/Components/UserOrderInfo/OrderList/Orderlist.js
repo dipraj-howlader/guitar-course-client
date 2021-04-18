@@ -19,11 +19,18 @@ const gotoPayment =(event) =>{
   history.push('/payment');
   const buyerName = event.target.parentElement.elements[0].value;
   const buyerEmail =  event.target.parentElement.elements[1].value;
+  const serviceName = event.target.parentElement.elements[2].value;
+  // console.log(productName);
+
   const info ={
     buyerName,
-    buyerEmail
+    buyerEmail,
+    serviceName,
+    servicePrice: courseService.data.Pprice
+
   }
   setUserInfo(info)
+  // console.log(info)
 }
 
 
