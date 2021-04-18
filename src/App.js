@@ -16,6 +16,7 @@ import Payment from "./Components/ProcessPayment/Payment/Payment";
 import AddService from "./Components/Admin/AddService/AddService";
 import ReviewForm from "./Components/CustomerReview/ReviewForm";
 import MakeAdmin from "./Components/Admin/MakeAdmin/MakeAdmin";
+import ManageProduct from "./Components/Admin/ManageProduct/ManageProduct";
 
 
 
@@ -69,6 +70,9 @@ function App() {
         <PrivateRoute path="/makeAdmin">
           <MakeAdmin></MakeAdmin>
         </PrivateRoute>
+        <Route path="/manageService">
+          <ManageProduct></ManageProduct>
+        </Route>
       </Switch>
     </Router>
     </UserContext3.Provider>

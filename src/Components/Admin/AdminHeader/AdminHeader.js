@@ -21,6 +21,9 @@ const AdminHeader = () => {
   const gotoMakeAdmin = () => {
     history.push('/makeAdmin')
   }
+  const gotoManageService = () =>{
+    history.push('/manageService')
+  }
 
   useEffect(() => {
     fetch('http://localhost:5000/admin')
@@ -64,7 +67,7 @@ for (let i = 0; i < useAdmin?.length; i++) {
       <a class="nav-link" onClick={gotoMakeAdmin}>Make Admin</a>
     </li>
     <li class="nav-item  ">
-      <a class="nav-link" href="#">Manage Service</a>
+      <a class="nav-link" onClick={gotoManageService}>Manage Service</a>
     </li>
     <li class="nav-item  ">
       <a class="nav-link" onClick={gotoHome}>Home</a>
