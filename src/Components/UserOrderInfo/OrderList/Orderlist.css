@@ -1,3 +1,6 @@
+.orderInfo{
+    text-align: center;
+}
 .orderInfo input{
     margin-bottom: 10px;
     width: 400px;

@@ -17,7 +17,9 @@ const OrderNavbar = () => {
         history.push(`/dashboard`)
       }
     return (
-        <div>
+        <div style={{backgroundColor:'rgb(214, 181, 158)',paddingTop:'10px',paddingBottom:'10px',cursor:'pointer'}}>
+      <h3 style={{textAlign:'center',color:'white'}}>Learn Guitar with Dipraj</h3>
+
             <ul className="nav justify-content-center">
         
   <li className="nav-item">
