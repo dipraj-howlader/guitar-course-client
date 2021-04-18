@@ -1,6 +1,8 @@
 import React from 'react';
 import { useForm } from "react-hook-form";
 import OrderNavbar from '../UserOrderInfo/OrderNavbar/OrderNavbar';
+import './ReviewForm.css';
+
 
 const ReviewForm = () => {
     const { register, handleSubmit, watch, formState: { errors } } = useForm();
@@ -12,7 +14,7 @@ const ReviewForm = () => {
       },
       body: JSON.stringify(data)
       })
-      .then(res => console.log('review') )
+      .then(res => alert("review added") )
   }
 
     return (
@@ -20,7 +22,7 @@ const ReviewForm = () => {
            <div>
             <OrderNavbar></OrderNavbar>
            </div>
-           <div>
+           <div className="reviewForm">
             <form onSubmit={handleSubmit(onSubmit)}>
       <input placeholder="Your name" {...register("yourName")} />
       <br/>
@@ -28,8 +30,7 @@ const ReviewForm = () => {
       <br/>
       <input placeholder="Description" {...register("reviewDcption")} />
       <br/>
-      <input type="submit" />
-   
+      <button type="button submit" class="btn btn-outline-success">Click Here</button>
     </form>
         </div>
        </div>

@@ -57,15 +57,15 @@ function App() {
         <PrivateRoute path="/dashboard">
           <Admin></Admin>
         </PrivateRoute>
-        <Route path="/payment">
+        <PrivateRoute path="/payment">
         <Payment></Payment>
-        </Route>
+        </PrivateRoute>
         <PrivateRoute path="/addService">
         <AddService></AddService>
         </PrivateRoute>
-        <Route path="/customer/review">
+        <PrivateRoute path="/customer/review">
         <ReviewForm></ReviewForm>
-        </Route>
+        </PrivateRoute>
         <PrivateRoute path="/makeAdmin">
           <MakeAdmin></MakeAdmin>
         </PrivateRoute>

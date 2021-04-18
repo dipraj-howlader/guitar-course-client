@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import {CardElement, useStripe, useElements} from '@stripe/react-stripe-js';
 import { useState } from 'react';
 import {  UserContext2 } from '../../../App';
-
+import '../Payment/Payment.css'
 const ProcessPayment = () => {
   const date = new Date().toDateString()
 
@@ -68,12 +68,15 @@ const ProcessPayment = () => {
   };
 
   return (
-    <div>
+    <div className="paymentprocess">
+                        <div className="paydiv">
+                        <h5>Do payment Here</h5>
+                         <h6>Enter Your Card Information: </h6>
+                        </div>
+
         <form onSubmit={handleSubmit}>
             <CardElement />
-            <button type="submit" disabled={!stripe}>
-                Pay
-            </button>
+            <button type="button submit" disabled={!stripe} class="btn btn-outline-primary">Pay</button>
         </form>
         {
             paymentError && <p style={{color: 'red'}}>{paymentError}</p>
