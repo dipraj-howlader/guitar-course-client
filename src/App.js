@@ -54,21 +54,21 @@ function App() {
         <PrivateRoute path="/order/:id">
         <PlaceOrder></PlaceOrder>
         </PrivateRoute>
-        <Route path="/dashboard">
+        <PrivateRoute path="/dashboard">
           <Admin></Admin>
-        </Route>
+        </PrivateRoute>
         <Route path="/payment">
         <Payment></Payment>
         </Route>
-        <Route path="/addService">
+        <PrivateRoute path="/addService">
         <AddService></AddService>
-        </Route>
+        </PrivateRoute>
         <Route path="/customer/review">
         <ReviewForm></ReviewForm>
         </Route>
-        <Route path="/makeAdmin">
+        <PrivateRoute path="/makeAdmin">
           <MakeAdmin></MakeAdmin>
-        </Route>
+        </PrivateRoute>
       </Switch>
     </Router>
     </UserContext3.Provider>

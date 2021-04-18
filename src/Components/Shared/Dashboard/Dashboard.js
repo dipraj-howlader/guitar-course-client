@@ -10,9 +10,9 @@ const Dashboard = () => {
             .then(data => setUserOrder(data))
         },[])
     return (
-        <div>
+        <div className="">
             <div>
-            <div className="row p-5">
+            <div style={{backgroundColor:'whitesmoke',boxShadow:'1px 1px 10px gray'}} className="row m-1 p-2">
                         <div className="col-md-2">
                             <h6>Name</h6>
                         </div>
@@ -20,10 +20,10 @@ const Dashboard = () => {
                             <h6>Email</h6>
                         </div>
                         <div className="col-md-2">
-                            <h6>Service</h6>
+                            <h6>Course</h6>
                         </div>
                         <div className="col-md-2">
-                            <h6>Service Price</h6>
+                            <h6>Course Price</h6>
                         </div>
                         <div className="col-md-1">
                             <h6>Pay with</h6>

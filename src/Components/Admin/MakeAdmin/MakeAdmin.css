@@ -1,0 +1,9 @@
+.makeAdmin{
+    justify-content: center;
+    text-align: center;
+    padding-top: 180px;
+}
+.makeAdmin input{
+    padding-left: 100px;
+    margin: 10px;
+}

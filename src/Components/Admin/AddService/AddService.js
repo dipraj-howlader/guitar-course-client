@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import AdminHeader from '../AdminHeader/AdminHeader';
 import { useForm } from "react-hook-form";
 import axios from 'axios';
+import './AddService.css'
 
 
 const AddService = () => {
@@ -48,12 +49,13 @@ const AddService = () => {
     };
 
     return (
-        <div>
-            <div>
+        <div className=" pb-5">
+            <div >
             <AdminHeader></AdminHeader>
             </div>
-            <div>
+            <div className="addservice" >
             <form onSubmit={handleSubmit(onSubmit)}>
+              <h3>Add Service</h3>
       <input placeholder="Service Name" defaultValue="" {...register("Pname")} />
       <br/>
 
@@ -66,7 +68,7 @@ const AddService = () => {
       <input type="file" name="" onChange={handleImageUpload}   />
       <br/>
 
-      <input type="submit" />
+      <button type="button submit" class="btn btn-outline-danger">Add Service</button>
     </form>
             </div>
         </div>

@@ -1,13 +1,11 @@
 import React from 'react';
-import { useHistory } from 'react-router';
+import { useHistory, useParams } from 'react-router';
 
 const OrderNavbar = () => {
+
     const history = useHistory();
     const gotoBook =() => {
         history.push('/order')
-    }
-    const gotoAdmin = ()=>{
-        history.push('/admin')
     }
     const gotoHome =() => {
         history.push('/home')
@@ -15,20 +13,18 @@ const OrderNavbar = () => {
       const gotoReview = () =>{
         history.push('/customer/review')
       }
+      const gotoDashboard = () =>{
+        history.push(`/dashboard`)
+      }
     return (
         <div>
             <ul className="nav justify-content-center">
+        
   <li className="nav-item">
-    <a className="nav-link active" aria-current="page" onClick={gotoBook} >Book</a>
-  </li>
-  <li className="nav-item">
-    <a className="nav-link" href="#">Booking List</a>
+    <a className="nav-link" onClick={gotoDashboard}>Course List</a>
   </li>
   <li className="nav-item">
     <a className="nav-link" onClick={gotoReview}>Review</a>
-  </li>
-  <li className="nav-item">
-    <a className="nav-link" onClick={gotoAdmin}>Admin</a>
   </li>
   <li className="nav-item">
     <a className="nav-link" onClick={gotoHome}>Home</a>

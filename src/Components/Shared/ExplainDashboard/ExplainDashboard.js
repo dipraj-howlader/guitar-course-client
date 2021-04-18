@@ -16,7 +16,7 @@ const ExplainDashboard = (props) => {
 
     for (let i = 0; i < useAdmin?.length; i++) {
         adminEmail = useAdmin[i].admin; 
-        console.log(adminEmail);
+            
         if(loggedInUser.email ===adminEmail){
             return(
                 <div className="row p-2">
