@@ -12,6 +12,9 @@ const AdminHeader = () => {
  const gotoDashboard = () => {
    history.push('/dashboard')
  }
+ const gotoMakeAdmin = () => {
+   history.push('/makeAdmin')
+ }
     return (
         <div>
             <ul class="nav justify-content-center">
@@ -22,7 +25,7 @@ const AdminHeader = () => {
     <a class="nav-link" onClick={gotoAddService}>Add Services</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="#">Make Admin</a>
+    <a class="nav-link" onClick={gotoMakeAdmin}>Make Admin</a>
   </li>
   <li class="nav-item">
     <a class="nav-link" href="#">Manage Services</a>
