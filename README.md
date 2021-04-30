@@ -12,7 +12,7 @@ This website is made for purchasing Guitar Course online.
 . User can give a review and it will show on main user interface.
 . Admin can control website from dashboard.
 
-##Technology: React, Bootstrap, Node.js, Express.js, MongoDB, Stripe, Firebase
+###Technology: React, Bootstrap, Node.js, Express.js, MongoDB, Stripe, Firebase
 Authentication, Heroku.
 
 Here my live website link : https://guitardipraj.web.app/
